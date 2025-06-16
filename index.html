@@ -1,32 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>3D Developer Avatar</title>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <style>
-      body {
-        margin: 0;
-        background-color: #000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-      model-viewer {
-        width: 100%;
-        height: 100%;
-      }
-    </style>
-  </head>
-  <body>
-    <model-viewer 
-      src="https://cdn.tinyglb.com/models/64f502bd98674319b0c2e777f70d9ce5.glb"
-      alt="3D Developer Model"
-      auto-rotate
-      camera-controls
-      autoplay
-      shadow-intensity="1"
-      style="background-color: transparent;">
-    </model-viewer>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aditya's Portfolio</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+    .content {
+      padding: 3rem;
+      max-width: 800px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      max-width: 600px;
+    }
+    .btn {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background-color: #4f46e5;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    model-viewer {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      width: 250px;
+      height: 300px;
+      z-index: 10;
+      pointer-events: none;
+    }
+    .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #1f1f1f;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+.stack-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+.stack-icons img {
+  width: 48px;
+  height: 48px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+    nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(18, 18, 18, 0.9);
+  padding: 1rem 2rem;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  justify-content: flex-end;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #60a5fa;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="content">
+    <h1>Hi, I'm Aditya 👨‍💻</h1>
+    <p>
+      I'm a Kotlin & Android Developer passionate about building clean UI, smart apps, and real-world ML-powered systems. I enjoy spending time solving problems and learning new technologies.
+    </p>
+    <button class="btn">Explore My Work</button>
+    <iframe src="https://tinyglb.com/viewer/f3e724fcd1bc49a58296c8a192006123" style="border: 0; height: 600px; width: 100%"></iframe>
+  </div>
+
+  <model-viewer 
+    src="https://cdn.tinyglb.com/models/64f502bd98674319b0c2e777f70d9ce5.glb"
+    alt="3D Developer Model"
+    auto-rotate 
+    camera-controls 
+    disable-zoom 
+    autoplay 
+    exposure="1"
+    shadow-intensity="1"
+    style="background-color: transparent;">
+  </model-viewer>
+  <nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#stack">Stack</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>🚦 Smart Traffic AI</h3>
+      <p>ML + Flask-powered live traffic analysis and visualization using YOLOv8 & SQLite.</p>
+    </div>
+    <div class="card">
+      <h3>📱 Code Brahma</h3>
+      <p>Jetpack Compose-based AI debugging assistant with GitHub OAuth & Firebase login.</p>
+    </div>
+    <!-- Add more cards -->
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>💬 Reach out at: <a href="mailto:aditya@example.com">aditya@example.com</a></p>
+  <p>Or connect on:
+    <a href="https://github.com/Aditya948351">GitHub</a>,
+    <a href="https://linkedin.com/in/your-link">LinkedIn</a>
+  </p>
+</section>
+
+
+
+</body>
 </html>
