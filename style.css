@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  min-height: 75vh;
+}
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events:none;
+  stroke-opacity: inherit;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  padding: 1rem 2vw;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: rgb(255, 0, 0);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #60a5fa;
+}
+
+.content {
+  padding: calc(5rem + 3vh) 5vw;
+  max-width: 90ch;
+  margin: 10em auto;
+  border-radius: 100px;
+  background: url(./travel-image3.jpg);
+  background-position: center;
+  color:white
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.6;
+  max-width: 75ch;
+}
