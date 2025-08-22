@@ -148,13 +148,6 @@ p {
   justify-content: center;
 }
 
-.linkedin-badge iframe, 
-.linkedin-badge .badge-base {
-  border-radius: 12px;
-  box-shadow: 0px 0px 18px rgba(0, 255, 204, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
 /* Hover glow effect */
 .linkedin-badge iframe:hover,
 .linkedin-badge .badge-base:hover {
