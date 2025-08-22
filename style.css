@@ -139,19 +139,3 @@ p {
   color: #fff;
   text-shadow: 0 0 8px #00ffcc;
 }
-
-/* ===== LINKEDIN BADGE ===== */
-.linkedin-badge {
-  margin-top: 40px;
-  display: flex;
-  z-index: 8;
-  justify-content: center;
-}
-
-/* Hover glow effect */
-.linkedin-badge iframe:hover,
-.linkedin-badge .badge-base:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 0px 25px rgba(0, 255, 204, 0.8);
-  height: 82px;
-}
