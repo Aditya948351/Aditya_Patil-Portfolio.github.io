@@ -139,3 +139,11 @@ p {
   color: #fff;
   text-shadow: 0 0 8px #00ffcc;
 }
+
+/* ===== LINKEDIN BADGE ===== */
+.linkedin-badge {
+  margin-top: 40px;
+  display: flex;
+  z-index: 8;
+  justify-content: center;
+}
