@@ -3,104 +3,300 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aditya's Portfolio</title>
+  <meta name="description" content="Aditya Patil — Android & Kotlin Developer portfolio. ML-powered apps, clean UI, real-world solutions." />
+  <title>Aditya Patil | Android & ML Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS – Animate On Scroll -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <!-- Background Video -->
+
+  <!-- ===== BACKGROUND VIDEO ===== -->
   <video autoplay muted loop playsinline id="bg-video">
     <source src="Futuristic_Developer_s_Lab_Video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
+  <div class="video-overlay"></div>
 
-  <!-- Header Content -->
-  <div class="content">
-    <h1>Hi, I'm Aditya 👨‍💻</h1>
-    <p>
-      I'm a Kotlin & Android Developer passionate about building clean UI, smart apps, and real-world ML-powered systems. I enjoy spending time solving problems and learning new technologies.
-    </p>
-  </div>
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">AP<span class="dot">.</span></a>
 
-  <!-- Navigation -->
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#stack">Stack</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#stack">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="project-box">
-      <h3>🚦 Real-Time Traffic Optimization</h3>
-      <p>ML + IoT powered system to optimize city-wide public transport and manage congestion efficiently.</p>
-      <a href="https://github.com/aditya" target="_blank">View on GitHub</a>
-    </div>
-
-    <div class="project-box">
-      <h3>🤖 Code Brahma</h3>
-      <p>AI-powered debugging & learning assistant for developers. Kotlin + Firebase + GitHub OAuth.</p>
-      <a href="https://github.com/aditya" target="_blank">View on GitHub</a>
-    </div>
-
-    <div class="project-box">
-      <h3>📱 Discipline Hub</h3>
-      <p>Productivity app built with Jetpack Compose featuring timetable, reminders, habit tracker & motivational content.</p>
-      <a href="https://github.com/aditya" target="_blank">View on GitHub</a>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="stack" class="section">
-    <h2>Tech Stack & Skills</h2>
-    <div class="skills-box">
-      <ul>
-        <li>💻 Android (Kotlin, Jetpack Compose)</li>
-        <li>🧠 Machine Learning (YOLOv8, ML Kit)</li>
-        <li>🌐 Web Dev (Flask, HTML, CSS, JS)</li>
-        <li>☁️ Firebase, GitHub, SQL, Python</li>
-      </ul>
-    </div>
-  </section>
-<!-- Contact Section -->
-<!-- Contact Section -->
-<section id="contact" class="section">
-  <h2>Contact</h2>
-
-  <!-- Flex row -->
-  <div class="contact-container" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 40px;">
-    
-    <!-- Left side: GitHub + Email -->
-    <div class="contact-left" style="display: flex; flex-direction: column; gap: 10px;">
-      <p>🌍 GitHub: <a href="https://github.com/aditya948351" target="_blank">github.com/aditya948351</a></p>
-      <p>📧 Reach me at: <a href="mailto:adityapatil9721@gmail.com">adityapatil9721@gmail.com</a></p>
-    </div>
-
-    <!-- Right side: LinkedIn Badge -->
-    <div class="linkedin-badge">
-      <div class="badge-base LI-profile-badge" 
-           data-locale="en_US" 
-           data-size="medium" 
-           data-theme="dark" 
-           data-type="VERTICAL" 
-           data-vanity="aditya-patil-a7743a292" 
-           data-version="v1">
-        <a class="badge-base__link LI-simple-link" 
-           href="https://in.linkedin.com/in/aditya-patil-a7743a292?trk=profile-badge">
-        </a>
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-content" data-aos="fade-up" data-aos-duration="900">
+      <p class="hero-greeting">👋 Hello, I'm</p>
+      <h1 class="hero-name">Aditya Patil</h1>
+      <h2 class="hero-typed">
+        I build <span id="typed-text"></span><span class="cursor">|</span>
+      </h2>
+      <p class="hero-sub">
+        Android &amp; Kotlin Developer · ML Enthusiast · Problem Solver
+      </p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="mailto:adityapatil9721@gmail.com" class="btn btn-outline">Hire Me</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/aditya948351" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://in.linkedin.com/in/aditya-patil-a7743a292" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:adityapatil9721@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
       </div>
     </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
 
-  </div>
-</section>
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <h2 class="section-title" data-aos="fade-up">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text" data-aos="fade-right" data-aos-delay="100">
+          <p>
+            I'm a passionate <strong>Android &amp; Kotlin Developer</strong> who loves crafting clean,
+            performant mobile experiences. I bridge the gap between elegant UI design and robust
+            backend logic — from real-time ML pipelines to Firebase-powered cloud apps.
+          </p>
+          <p>
+            When I'm not coding, you'll find me exploring new technologies, optimising algorithms,
+            or dreaming up solutions to real-world problems. I believe software can genuinely improve
+            people's lives — and that drives everything I build.
+          </p>
+          <div class="about-info">
+            <div class="info-item"><i class="fa-solid fa-location-dot"></i> India</div>
+            <div class="info-item"><i class="fa-solid fa-code"></i> Android · ML · Web</div>
+            <div class="info-item"><i class="fa-solid fa-graduation-cap"></i> B.E. Student</div>
+            <div class="info-item"><i class="fa-solid fa-circle-check" style="color:#00ffcc"></i> Open to Opportunities</div>
+          </div>
+        </div>
+        <div class="about-stats" data-aos="fade-left" data-aos-delay="200">
+          <div class="stat-card">
+            <span class="stat-num">3+</span>
+            <span class="stat-label">Major Projects</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">5+</span>
+            <span class="stat-label">Tech Stacks</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">ML</span>
+            <span class="stat-label">Powered Apps</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">∞</span>
+            <span class="stat-label">Curiosity</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- LinkedIn Script -->
-<script src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <div class="section-inner">
+      <h2 class="section-title" data-aos="fade-up">Projects</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="50">Things I've built that I'm proud of</p>
 
+      <div class="projects-grid">
 
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-icon"><i class="fa-solid fa-traffic-light"></i></div>
+          <h3>Real-Time Traffic Optimization</h3>
+          <p>ML + IoT powered system to optimise city-wide public transport and manage congestion using YOLOv8 computer vision.</p>
+          <div class="card-tags">
+            <span>Python</span><span>YOLOv8</span><span>IoT</span><span>ML</span>
+          </div>
+          <a class="card-link" href="https://github.com/aditya948351" target="_blank">
+            <i class="fa-brands fa-github"></i> View on GitHub
+          </a>
+        </div>
+
+        <div class="project-card featured" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-badge">Featured</div>
+          <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
+          <h3>Code Brahma</h3>
+          <p>AI-powered debugging &amp; learning assistant for developers. Integrates Kotlin, Firebase, and GitHub OAuth for seamless dev workflows.</p>
+          <div class="card-tags">
+            <span>Kotlin</span><span>Firebase</span><span>GitHub OAuth</span><span>AI</span>
+          </div>
+          <a class="card-link" href="https://github.com/aditya948351" target="_blank">
+            <i class="fa-brands fa-github"></i> View on GitHub
+          </a>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+          <h3>Discipline Hub</h3>
+          <p>Productivity app built with Jetpack Compose — timetable manager, habit tracker, smart reminders &amp; motivational content feed.</p>
+          <div class="card-tags">
+            <span>Kotlin</span><span>Jetpack Compose</span><span>Room DB</span>
+          </div>
+          <a class="card-link" href="https://github.com/aditya948351" target="_blank">
+            <i class="fa-brands fa-github"></i> View on GitHub
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="stack" class="section">
+    <div class="section-inner">
+      <h2 class="section-title" data-aos="fade-up">Tech Stack &amp; Skills</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="50">Technologies I work with daily</p>
+
+      <div class="skills-categories" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="skill-group">
+          <h4><i class="fa-solid fa-mobile-screen-button"></i> Android Dev</h4>
+          <div class="skill-bar-wrap"><span>Kotlin</span><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
+          <div class="skill-bar-wrap"><span>Jetpack Compose</span><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div>
+          <div class="skill-bar-wrap"><span>Android SDK</span><div class="skill-bar"><div class="skill-fill" data-width="88"></div></div></div>
+          <div class="skill-bar-wrap"><span>Room / Retrofit</span><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
+        </div>
+
+        <div class="skill-group">
+          <h4><i class="fa-solid fa-brain"></i> Machine Learning</h4>
+          <div class="skill-bar-wrap"><span>Python</span><div class="skill-bar"><div class="skill-fill" data-width="82"></div></div></div>
+          <div class="skill-bar-wrap"><span>YOLOv8</span><div class="skill-bar"><div class="skill-fill" data-width="75"></div></div></div>
+          <div class="skill-bar-wrap"><span>ML Kit</span><div class="skill-bar"><div class="skill-fill" data-width="78"></div></div></div>
+          <div class="skill-bar-wrap"><span>TensorFlow Lite</span><div class="skill-bar"><div class="skill-fill" data-width="70"></div></div></div>
+        </div>
+
+        <div class="skill-group">
+          <h4><i class="fa-solid fa-cloud"></i> Backend &amp; Cloud</h4>
+          <div class="skill-bar-wrap"><span>Firebase</span><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div>
+          <div class="skill-bar-wrap"><span>Flask</span><div class="skill-bar"><div class="skill-fill" data-width="72"></div></div></div>
+          <div class="skill-bar-wrap"><span>SQL</span><div class="skill-bar"><div class="skill-fill" data-width="75"></div></div></div>
+          <div class="skill-bar-wrap"><span>REST APIs</span><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
+        </div>
+
+        <div class="skill-group">
+          <h4><i class="fa-solid fa-globe"></i> Web &amp; Tools</h4>
+          <div class="skill-bar-wrap"><span>HTML / CSS / JS</span><div class="skill-bar"><div class="skill-fill" data-width="78"></div></div></div>
+          <div class="skill-bar-wrap"><span>Git &amp; GitHub</span><div class="skill-bar"><div class="skill-fill" data-width="88"></div></div></div>
+          <div class="skill-bar-wrap"><span>Figma</span><div class="skill-bar"><div class="skill-fill" data-width="65"></div></div></div>
+          <div class="skill-bar-wrap"><span>Linux / CLI</span><div class="skill-bar"><div class="skill-fill" data-width="72"></div></div></div>
+        </div>
+
+      </div>
+
+      <!-- Tech badges row -->
+      <div class="badges-row" data-aos="fade-up" data-aos-delay="200">
+        <span class="badge"><i class="fa-brands fa-android"></i> Android</span>
+        <span class="badge"><i class="fa-brands fa-python"></i> Python</span>
+        <span class="badge"><i class="fa-brands fa-github"></i> GitHub</span>
+        <span class="badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+        <span class="badge"><i class="fa-brands fa-html5"></i> HTML5</span>
+        <span class="badge"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+        <span class="badge"><i class="fa-solid fa-fire"></i> Firebase</span>
+        <span class="badge"><i class="fa-solid fa-database"></i> SQL</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section">
+    <div class="section-inner">
+      <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="50">
+        I'm currently open to new opportunities. Whether you have a project idea, a job offer, or just want to say hi — my inbox is always open!
+      </p>
+
+      <div class="contact-grid">
+
+        <div class="contact-cards" data-aos="fade-right" data-aos-delay="100">
+          <a href="https://github.com/aditya948351" target="_blank" class="contact-card">
+            <i class="fa-brands fa-github"></i>
+            <div>
+              <strong>GitHub</strong>
+              <span>github.com/aditya948351</span>
+            </div>
+          </a>
+          <a href="mailto:adityapatil9721@gmail.com" class="contact-card">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <strong>Email</strong>
+              <span>adityapatil9721@gmail.com</span>
+            </div>
+          </a>
+          <a href="https://in.linkedin.com/in/aditya-patil-a7743a292" target="_blank" class="contact-card">
+            <i class="fa-brands fa-linkedin"></i>
+            <div>
+              <strong>LinkedIn</strong>
+              <span>aditya-patil-a7743a292</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="linkedin-embed" data-aos="fade-left" data-aos-delay="200">
+          <div class="badge-base LI-profile-badge"
+               data-locale="en_US"
+               data-size="medium"
+               data-theme="dark"
+               data-type="VERTICAL"
+               data-vanity="aditya-patil-a7743a292"
+               data-version="v1">
+            <a class="badge-base__link LI-simple-link"
+               href="https://in.linkedin.com/in/aditya-patil-a7743a292?trk=profile-badge"></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <p>Designed &amp; Built by <strong>Aditya Patil</strong></p>
+      <div class="footer-socials">
+        <a href="https://github.com/aditya948351" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://in.linkedin.com/in/aditya-patil-a7743a292" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:adityapatil9721@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <p class="footer-copy">&copy; <span id="year"></span> Aditya Patil. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-top button -->
+  <button id="scroll-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- LinkedIn Script -->
+  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>
