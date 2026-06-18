@@ -48,7 +48,7 @@ nav ul {
 }
 
 nav a {
-  color: rgb(255, 0, 0);
+  color: white;
   text-decoration: none;
   font-weight: 500;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
